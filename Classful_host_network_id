@@ -1,0 +1,31 @@
+ip=input("enter ip(eg:192.154.132.001):")
+tp_a=str(ip)
+# print(type(tp_a))
+# print(tp_a)
+class_ip=int(tp_a[0:3])
+class_ip2=int(tp_a[4:7])
+class_ip3=int(tp_a[8:11])
+class_ip4=int(tp_a[12:15])
+if 0<=(class_ip and class_ip2 and class_ip3 and class_ip4)<=255:
+    print('ip is ok')
+# print(cla
+    if 0<=class_ip<=127:
+        print("A")
+        print("net Id= "+tp_a[0:3]+".0.0.0" )
+        print("host Id= "+tp_a[4:15])
+    elif 128<=class_ip<=191:
+        print("B")
+        print("net Id= "+tp_a[0:7]+".0.0" )
+        print("host Id= "+tp_a[8:15])
+    elif 192<=class_ip<=223:
+        print("C")
+        print("net Id= "+tp_a[0:11]+".0" )
+        print("host Id= "+tp_a[12:15])
+    elif 224<=class_ip<=239:
+        print("D")
+        print("net Id= "+tp_a[0:15] )
+    elif 240<=class_ip<=255:
+        print("E")
+        # print("net Id= "+tp_a[0:3] )
+else:
+    print("given ip is wrong")
